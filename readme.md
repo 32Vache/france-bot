@@ -5,7 +5,8 @@
 ![Last update](https://img.shields.io/date/1589894789?label=last%20updated)
 ![NodeJS](https://img.shields.io/badge/node--js-12.x-yellow)
 ![Status](https://img.shields.io/badge/status-on%20work-yellow)
-https://discord.gg/9p5HgJk\
+<br>
+https://discord.gg/9p5HgJk
 \
 By 32Vache for the nation of France (EarthMC)
 
