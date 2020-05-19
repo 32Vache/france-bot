@@ -9,7 +9,7 @@
 <br>
 https://discord.gg/9p5HgJk
 \
-By 32Vache for the nation of France (EarthMC)
+By 32Vache for the nation of France in EarthMC
 
 ## Changelog
 #### Version 0.7.1 | 19 may 2020
