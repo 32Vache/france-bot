@@ -2,9 +2,10 @@
 
 ![Version](https://img.shields.io/badge/version-0.7.1-orange)
 ![DiscordJS Version](https://img.shields.io/badge/discord.js-12.2.0-green)
-![Last update](https://img.shields.io/date/1589894789?label=last%20updated)
+![Last update](https://img.shields.io/github/last-commit/32Vache/france-bot)
 ![NodeJS](https://img.shields.io/badge/node--js-12.x-yellow)
-![Status](https://img.shields.io/badge/status-on%20work-yellow)
+![Code size](https://img.shields.io/github/size/32Vache/france-bot/index.js?label=code%20size)
+![Activity](https://img.shields.io/github/commit-activity/m/32Vache/france-bot)
 <br>
 https://discord.gg/9p5HgJk
 \
