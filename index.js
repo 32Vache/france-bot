@@ -412,22 +412,6 @@ client.on("message", message => {
     }
   }
 });
-// /bidder
-client.on("message", message => {
-  if (message.content === "/bidder") {
-    const bidrole = "700377301019525201";
-    message.member.roles.add(bidrole);
-    message.reply("Successfully added the Bidder role!");
-  }
-});
-// /unbidder
-client.on("message", message => {
-  if (message.content === "/unbidder") {
-    const bidrole = "700377301019525201";
-    message.member.roles.remove(bidrole);
-    message.reply("Successfully removed the Bidder role!");
-  }
-});
 // /cat
 client.on("message", message => {
   if (message.content === "/cat") {
@@ -517,6 +501,15 @@ client.on("message", async message => {
     message.channel.send(birbEmbed);
   }
 });
+
+// reaction roles
+const reactionRole = new ReactionRole.Main(client);
+let option1 = reactionRole.createOption("🇫🇷", "713784651608490034");
+let option2 = reactionRole.createOption("🇬🇧", "713785706022961222");
+let option3 = reactionRole.createOption("gold:705157110874243157","700377301019525201")
+reactionRole.createMessage("713790709492219936", "713787566653964348", option1, option2, option3);
+ 
+reactionRole.init();
 
 // anti autosleep module
 const http = require("http");
