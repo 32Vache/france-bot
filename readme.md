@@ -1,6 +1,6 @@
 # France Bot
 
-![Version](https://img.shields.io/badge/version-0.7.1-orange)
+![Version](https://img.shields.io/badge/version-0.7.2-orange)
 ![DiscordJS Version](https://img.shields.io/badge/discord.js-12.2.0-green)
 ![Last update](https://img.shields.io/github/last-commit/32Vache/france-bot)
 ![NodeJS](https://img.shields.io/badge/node--js-12.x-yellow)
@@ -12,7 +12,9 @@ https://discord.gg/9p5HgJk
 By 32Vache for the nation of France in EarthMC
 
 ## Changelog
-#### Version 0.7.1 | 19 may 2020
+#### Version 0.7.2 | 23 May 2020
+Code was formatted in a better way (thanks warrior very cool)
+#### Version 0.7.1 | 19 May 2020
 The /say command was deleted due to exploit.\
 /mute got an upgrade and now supports a duration and a reason !\
 Old /mute was renamed to /pmute and is used to permantly mute users.
