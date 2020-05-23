@@ -5,7 +5,7 @@
 ![Last update](https://img.shields.io/github/last-commit/32Vache/france-bot)
 ![NodeJS](https://img.shields.io/badge/node--js-12.x-yellow)
 ![Code size](https://img.shields.io/github/size/32Vache/france-bot/index.js?label=code%20size)
-![Activity](https://img.shields.io/github/commit-activity/m/32Vache/france-bot)
+![Activity](https://img.shields.io/github/commit-activity/m/32Vache/France-bot)
 <br>
 https://discord.gg/9p5HgJk
 \
