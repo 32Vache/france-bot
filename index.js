@@ -1,10 +1,8 @@
 const Discord = require("discord.js");
 const express = require("express");
 const ms = require("ms");
-const ytdl = require("ytdl-core");
 const fetch = require("node-fetch");
 const Minesweeper = require("discord.js-minesweeper");
-const queue = new Map();
 require("events").EventEmitter.prototype._maxListeners = 100;
 const client = new Discord.Client();
 
@@ -13,7 +11,7 @@ client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
   var d = Date(Date.now());
   client.channels.cache
-    .get("637663684356997125")
+    .get("714913492251181127")
     .send(
       "Bot successfully started ( " + Date.now() + ", " + d.toString() + " )"
     );
@@ -26,13 +24,13 @@ client.on("ready", async () => {
   });
   setInterval(async () => {
     const activities = [
-      `/n spawn France`,
+   // `/n spawn France`,
       `Vive la France !`,
-      `${client.users.size} Members`,
+      `${client.guilds.cache.get("694263097166266422").memberCount} Members`,
       `France Epic!`,
       `Certified Frog`,
       `pepole eat baguette`,
-      `/helpdddddd`
+      `/help`
     ];
     const activity = activities[Math.floor(Math.random() * activities.length)];
     await client.user.setActivity(activity, { type: "WATCHING" });
@@ -42,12 +40,12 @@ client.on("ready", async () => {
 // Websockets and network
 client.on("shardError", error => {
   client.channels.cache
-    .get("637663684356997125")
+    .get("714913492251181127")
     .send(":x: A network error occured...\n```" + error + "```");
 });
 // API
 process.on("unhandledRejection", error => {
-  client.channels.cache.get("637663684356997125").send(":x: An API error occured...\n```" + error + "```");
+  client.channels.cache.get("714913492251181127").send(":x: An API error occured...\n```" + error + "```");
 });
 // /restart
 client.on("message", message => {
@@ -63,7 +61,8 @@ client.on("message", message => {
 
 client.on("message", async message => {
   var badWords = [
-    "nigga",
+    "https://tenor.com/view/dancing-cow-farm-barn-dancing-cow-gif-14274520"
+     /*  "nigga",
     "nigger",
     "nibba",
     "nibber",
@@ -75,7 +74,7 @@ client.on("message", async message => {
     "ni gga",
     "n1gga",
     "migga",
-    "negro"
+    "negro"*/
   ];
   let msg = message.content.toLowerCase();
   if (badWords.includes(msg) && !message.member.hasPermissions("MANAGE_MESSAGES"))
@@ -189,7 +188,7 @@ client.on("message", async message => {
         : message.channel.send(":warning: You have provided invalid data.");
     }
     
-    if (message.content.toLowerCase().startsWith("/stats") || message.content.toLowerCase().startsWith("/statistics"))
+   /* if (message.content.toLowerCase().startsWith("/stats") || message.content.toLowerCase().startsWith("/statistics"))
     {
       var ministers = message.guild.roles.cache.get("555403931971223552").members.size;
       var nobles = message.guild.roles.cache.get("582070219380490271").members.size;
@@ -201,7 +200,7 @@ client.on("message", async message => {
       .setColor("#ffee00")
       .setTimstamp()
       .setDescription(`${ministers} Ministers\n${nobles} Nobles\n${mayors} Mayors\n${citizens} Citizens\n${message.guild.memberCount} Total Members`)
-    }
+    }*/
     
     if (message.content.toLowerCase().startsWith("/mihai"))
     {
@@ -502,15 +501,6 @@ client.on("message", async message => {
   }
 });
 
-// reaction roles
-const reactionRole = new ReactionRole.Main(client);
-let option1 = reactionRole.createOption("🇫🇷", "713784651608490034");
-let option2 = reactionRole.createOption("🇬🇧", "713785706022961222");
-let option3 = reactionRole.createOption("gold:705157110874243157","700377301019525201")
-reactionRole.createMessage("713790709492219936", "713787566653964348", option1, option2, option3);
- 
-reactionRole.init();
-
 // anti autosleep module
 const http = require("http");
 const app = express();
@@ -527,14 +517,14 @@ client.login(process.env.TOKEN);
 
 // Someone joins the server
 client.on("guildMemberAdd", member => {
-  member.guild.channels.cache.get("513863400737079296").send
+  member.guild.channels.cache.get("694301677456719914").send
   (
     new Discord.MessageEmbed()
     .setColor("#00ff00")
     .setTitle("Someone just joined!")
     .setDescription(`Welcome to the France discord server, ${member.user.tag} \nMake sure to set your nickname to Nation | IGN | Town , if you are a citizen/mayor/ally please go to <#700355160391548958> and follow the pinned format! \nWe now have ${member.guild.memberCount} members!`)
   )
-  member.roles.add("513859693639368705");
+//  member.roles.add("513859693639368705");
 });
 // Someone leaves the server
 client.on("guildMemberRemove", member => {
@@ -551,7 +541,7 @@ client.on("guildMemberRemove", member => {
     `The Unepic of the year goes to ${member.user.tag} who just left!`
   ];
 
-  member.guild.channels.cache.get("513863400737079296").send
+  member.guild.channels.cache.get("694301677456719914").send
   (
     new Discord.MessageEmbed()
     .setColor("#ff0000")
