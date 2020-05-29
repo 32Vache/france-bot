@@ -1,6 +1,6 @@
 # France Bot
 
-![Version](https://img.shields.io/badge/version-0.7.3-orange)
+![Version](https://img.shields.io/badge/version-0.7.3b-orange)
 ![DiscordJS Version](https://img.shields.io/badge/discord.js-12.2.0-green)
 ![Last update](https://img.shields.io/github/last-commit/32Vache/france-bot)
 ![NodeJS](https://img.shields.io/badge/node--js-12.x-yellow)
