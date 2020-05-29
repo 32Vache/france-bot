@@ -7,11 +7,13 @@
 ![Code size](https://img.shields.io/github/size/32Vache/france-bot/index.js?label=code%20size)
 ![Activity](https://img.shields.io/github/commit-activity/m/32Vache/france-bot)
 <br>
-https://discord.gg/9p5HgJk
+https://discord.gg/M6dH3e7
 \
-By 32Vache for the nation of France in EarthMC
+By 32Vache for the nation of France_Empire in EarthMC
 
 ## Changelog
+#### Version 0.7.3b | 29 May 2020
+Updated code to fit the new discord server.
 #### Version 0.7.3 | 23 May 2020
 Added self roles ! #self-roles
 Removed /bidder and /unbidder in favor of the new self roles method.
