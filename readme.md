@@ -1,6 +1,6 @@
 # France Bot
 
-![Version](https://img.shields.io/badge/version-0.7.3b-orange)
+![Version](https://img.shields.io/badge/version-0.7.4-orange)
 ![DiscordJS Version](https://img.shields.io/badge/discord.js-12.2.0-green)
 ![Last update](https://img.shields.io/github/last-commit/32Vache/france-bot)
 ![NodeJS](https://img.shields.io/badge/node--js-12.x-yellow)
@@ -12,6 +12,8 @@ https://discord.gg/M6dH3e7
 By 32Vache for the nation of France_Empire in EarthMC
 
 ## Changelog
+#### Version 0.7.4 | 7 June 2020
+Edited welcome messages; now sent in DMs
 #### Version 0.7.3b | 29 May 2020
 Updated code to fit the new discord server.
 #### Version 0.7.3 | 23 May 2020
