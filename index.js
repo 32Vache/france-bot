@@ -61,7 +61,16 @@ client.on("message", message => {
 
 client.on("message", async message => {
   var badWords = [
-    "https://tenor.com/view/dancing-cow-farm-barn-dancing-cow-gif-14274520"
+    "https://tenor.com/view/dancing-cow-farm-barn-dancing-cow-gif-14274520",
+    "国",
+    "ア",
+    "ニ",
+    "メ",
+    "に",
+    "な",
+    "り",
+    "王",
+    "。"
      /*  "nigga",
     "nigger",
     "nibba",
@@ -77,10 +86,11 @@ client.on("message", async message => {
     "negro"*/
   ];
   let msg = message.content.toLowerCase();
-  if (badWords.includes(msg) && !message.member.hasPermissions("MANAGE_MESSAGES"))
+  if (badWords.includes(msg))
+      //  && !message.member.hasPermissions("MANAGE_MESSAGES")
   {
     await message.delete();
-    message.reply("You cannot say that here!").then(msg => msg.delete(10*1000));
+    message.reply("can u dont").then(msg => msg.delete(10*1000));
   }
   
   // /Help
@@ -342,7 +352,7 @@ client.on("message", async message => {
     if (message.member.hasPermission("MANAGE_MESSAGES")) {
       if (message.content !== "/mute") { 
   let tomute = message.guild.member(
-    message.mentions.users.first() || message.guild.members.get(args[0])
+    message.mentions.users.first() || message.guild.members.cache.get(args[0])
   );
   if (!tomute) return message.reply("Couldn't find user.");
   if (tomute.hasPermission("MANAGE_MESSAGES"))
@@ -517,14 +527,38 @@ client.login(process.env.TOKEN);
 
 // Someone joins the server
 client.on("guildMemberAdd", member => {
+  var i = client.guilds.cache.get("694263097166266422").memberCount;
+  function ordinal_suffix_of(i) {
+    var j = i % 10,
+        k = i % 100;
+    if (j == 1 && k != 11) {
+        return i + "st";
+    }
+    if (j == 2 && k != 12) {
+        return i + "nd";
+    }
+    if (j == 3 && k != 13) {
+        return i + "rd";
+    }
+    return i + "th";
+}
   member.guild.channels.cache.get("694301677456719914").send
   (
     new Discord.MessageEmbed()
     .setColor("#00ff00")
     .setTitle("Someone just joined!")
-    .setDescription(`Welcome to the France discord server, ${member.user.tag} \nMake sure to set your nickname to Nation | IGN | Town , if you are a citizen/mayor/ally please go to <#700355160391548958> and follow the pinned format! \nWe now have ${member.guild.memberCount} members!`)
+    .setDescription(`Welcome to the France discord server, ${member.user.tag}! \nWe now have ${member.guild.memberCount} members!`)
+  );
+  member.send
+  (
+  new Discord.MessageEmbed()
+  .setColor("#" + Math.floor(Math.random()*16777215).toString(16))
+  .setTitle("Welcome !")
+  .setDescription(`Welcome ${member.user.tag} ! You are the ${ordinal_suffix_of(i)} member of the server.\nMake sure your nickname on the server is set to IGN | Town | Nation , if you are a citizen/mayor/ally please go to #role-request and ask for correct roles!`)
+  .setFooter("France bot")
+  .setTimestamp()
+  .setImage("https://media.discordapp.net/attachments/714913492251181127/716297406571872326/uuu.png")
   )
-//  member.roles.add("513859693639368705");
 });
 // Someone leaves the server
 client.on("guildMemberRemove", member => {
