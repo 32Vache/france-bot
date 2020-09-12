@@ -18,7 +18,7 @@
     "fetch": "^1.1.0",
     "ffmpeg-static": "^4.2.2",
     "ms": "^2.1.2",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "opusscript": "0.0.7",
     "reaction-role": "^1.6.4",
     "sodium": "^3.0.2",
